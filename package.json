@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@moltin/sdk": "github:ynnoj/js-sdk",
+    "cookie-universal-nuxt": "^1.0.14",
     "nuxt-edge": "^2.0.0-25396844.0aea0d5"
   },
   "devDependencies": {
