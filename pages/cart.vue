@@ -8,7 +8,7 @@
           </p>
         </div>
         <div class="flex items-center">
-          <button class="border px-2 py-1 rounded bg-red-light hover:bg-red text-white border-red" @click="remove(item.id)">x</button>
+          <button class="border px-2 py-1 rounded bg-red-light hover:bg-red text-white border-red" @click="removeProduct(item.id)">x</button>
         </div>
       </div>
       <div v-if="!cart || !cart.items || !cart.items.length" class="text-center">
@@ -37,7 +37,9 @@ export default {
   computed: mapState(['connected', 'cart']),
   methods: {
     async removeProduct(productId) {
-      await this.$moltin.removeFromCart(this.cart.id, productId)
+      const { json } = await this.$moltin.removeFromCart(this.cart.id, productId)
+
+      this.$store.commit('SET_CART_DATA', json)
     },
     checkout() {
       this.$checkout.open({
@@ -78,7 +80,7 @@ export default {
 
       try {
         const { json: { data: { id } } } = await this.$moltin.checkoutCart(
-          this.$store.state.cartId,
+          this.cart.id,
           customer,
           address
         )
