@@ -1,3 +1,8 @@
+import dotenv from 'dotenv'
+
+// Load .env file
+dotenv.config()
+
 export default {
   /*
   ** Headers of the page
@@ -12,6 +17,14 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  /**
+   * Environment variables
+   */
+  env: {
+    MOLTIN_CLIENT_ID: process.env.MOLTIN_CLIENT_ID,
+    STRIPE_KEY: process.env.STRIPE_KEY
   },
 
   /*
@@ -30,15 +43,15 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/moltin.js'
+    '~/plugins/moltin.js',
+    { ssr: false, src: '~/plugins/stripe.js' }
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    'cookie-universal-nuxt',
-    '@nuxtjs/dotenv'
+    'cookie-universal-nuxt'
   ],
 
   /*
