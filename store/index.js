@@ -23,6 +23,10 @@ export const mutations = {
 }
 
 export const actions = {
+  setToken({ commit }, token) {
+    this.$cookies.set('token', token)
+    commit('SET_TOKEN', token)
+  },
   async nuxtServerInit({ commit }, { app }) {
     // Get if user is connected
     commit('SET_TOKEN', app.$cookies.get('token') || null)

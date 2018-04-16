@@ -9,6 +9,7 @@
       <label class="Register__Form__Label" for="pwd">Password</label>
       <input v-model="form.password" class="Register__Form__Input" id="pwd" type="password">
       <button class="Register__Form__Button" type="submit">Register</button>
+      <p v-if="error">{{ error }}</p>
     </form>
   </div>
 </template>
@@ -21,12 +22,24 @@ export default {
         name: '',
         email: '',
         password: ''
-      }
+      },
+      loading: false,
+      error: null
     }
   },
   methods: {
-    register () {
-      console.log(this.form)
+    async register() {
+      this.loading = true
+      this.error = null
+      try {
+        const { token } = await this.$moltin.register(this.form)
+
+        this.$store.dispatch('setToken', token)
+        this.loading = false
+        this.$router.push('/account')
+      } catch ({ json: { errors } }) {
+        this.error = errors.map((error) => error.detail).join('. ')
+      }
     }
   }
 }
