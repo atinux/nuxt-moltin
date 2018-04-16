@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="Login">
     <h1 class="Login__Title">Log in to your account</h1>
     <form action="/" @submit.prevent="login">
@@ -9,6 +10,9 @@
       <button class="Login__Form__Button" type="submit">Login</button>
     </form>
   </div>
+=======
+  <pre>Login</pre>
+>>>>>>> 17de1a7e0bce65c9f6a33f6c7370cbe104933b39
 </template>
 
 <script>

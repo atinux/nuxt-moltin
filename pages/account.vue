@@ -1,5 +1,5 @@
 <template>
-  <pre>Cart</pre>
+  <pre>My Account</pre>
 </template>
 
 <script>
