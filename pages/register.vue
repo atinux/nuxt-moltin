@@ -9,7 +9,7 @@
       <label class="Register__Form__Label" for="pwd">Password</label>
       <input v-model="form.password" class="Register__Form__Input" id="pwd" type="password">
       <button class="Register__Form__Button" type="submit">Register</button>
-      <p v-if="error">{{ error }}</p>
+      <p class="Register__Message" v-if="error">{{ error }}</p>
     </form>
   </div>
 </template>
@@ -85,5 +85,13 @@ export default {
 }
 .Register__Form__Button:hover {
   background-color: #E06A2C;
+}
+.Register__Form__Button:focus {
+  outline: none;
+}
+.Register__Message {
+  color: #E06A2C;
+  padding: 20px 0;
+  float: right;
 }
 </style>
