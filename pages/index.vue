@@ -34,7 +34,15 @@ export default {
     })
 
     return { products }
-  }
+  },
+  head () {
+    return {
+      title: 'Nuxt.js with Moltin',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Nuxt.js demo with Moltin API for e-commerce' }
+      ]
+    }
+  },
 }
 </script>
 
