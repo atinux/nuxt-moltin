@@ -4,6 +4,11 @@
 
 <script>
 export default {
-  middleware: 'auth'
+  middleware: 'auth',
+  methods: {
+    logout() {
+      this.$store.dispatch('removeToken')
+    }
+  }
 }
 </script>

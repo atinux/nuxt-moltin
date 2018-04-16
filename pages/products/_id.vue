@@ -68,8 +68,6 @@ export default {
         ? data.relationships.main_image.data.id
         : false
 
-      console.log("data :", data)
-
       return {
         form: {
           qty: 1
@@ -86,8 +84,11 @@ export default {
     }
   },
   methods: {
-    addToCart() {
+    async addToCart() {
+      const { json } = await this.$moltin.addToCart(this.$store.state.cart.id, this.product.id, this.form.qty)
 
+      this.$store.commit('SET_CART_DATA', json)
+      this.$router.push('/cart')
     }
   }
 }
