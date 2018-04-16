@@ -88,7 +88,7 @@ export default {
       const { json } = await this.$moltin.addToCart(this.$store.state.cart.id, this.product.id, this.form.qty)
 
       this.$store.commit('SET_CART_DATA', json)
-      this.$router.push('/cart')
+      // this.$router.push('/cart')
     }
   }
 }
