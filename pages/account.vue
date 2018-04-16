@@ -40,13 +40,13 @@ export default {
 }
 .Account__Button {
   color: #fff;
-  background-color: #F2711C;
+  background-color: #42b883;
   border-radius: 4px;
   padding: 10px 20px;
   float: right;
 }
 .Account__Button:hover {
-  background-color: #E06A2C;
+  background-color: #3C8171;
 }
 .Account__Button:focus {
   outline: none;

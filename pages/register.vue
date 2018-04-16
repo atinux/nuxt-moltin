@@ -81,16 +81,16 @@ export default {
 }
 .Register__Form__Input:focus {
   outline: none;
-  border-color: #E06A2C;
+  border-color: #3C8171;
 }
 .Register__Form__Button {
   color: #fff;
-  background-color: #F2711C;
+  background-color: #42b883;
   border-radius: 4px;
   padding: 10px 20px;
 }
 .Register__Form__Button:hover {
-  background-color: #E06A2C;
+  background-color: #3C8171;
 }
 .Register__Form__Button:focus {
   outline: none;
