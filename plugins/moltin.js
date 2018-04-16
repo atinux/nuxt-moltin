@@ -12,7 +12,7 @@ const $moltin = {
   // Cart
   addToCart: (cartId, productId, quantity) => Moltin.Cart(cartId).AddProduct(productId, quantity),
   getCartItems: (id) => Moltin.Cart(id).Items(),
-  removeFromCart: (productId, cartId) => Moltin.Cart(cartId).RemoveItem(productId),
+  removeFromCart: (cartId, productId) => Moltin.Cart(cartId).RemoveItem(productId),
   checkoutCart: (cartId, customer, billing) => Moltin.Cart(cartId).Checkout(customer, billing),
   // Order
   getOrders: (token) => Moltin.Orders.With('items').All(token),
