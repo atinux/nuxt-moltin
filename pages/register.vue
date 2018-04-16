@@ -1,5 +1,5 @@
 <template>
-  <div class="Register p-4">
+  <div class="Register p-4 lg:px-0">
     <h1 class="Register__Title">Create an account</h1>
     <form action="/" @submit.prevent="register">
       <label class="Register__Form__Label" for="name">Name</label>

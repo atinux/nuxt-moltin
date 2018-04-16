@@ -1,5 +1,5 @@
 <template>
-  <div class="Login p-4">
+  <div class="Login p-4 lg:px-0">
     <h1 class="Login__Title">Log in to your account</h1>
     <form action="/" @submit.prevent="login">
       <label class="Login__Form__Label" for="email">Email</label>
