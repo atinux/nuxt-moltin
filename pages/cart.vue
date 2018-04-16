@@ -28,12 +28,12 @@
 import { mapState } from 'vuex'
 
 export default {
-<<<<<<< HEAD
   head () {
     return {
       title: 'Cart',
       titleTemplate: 'Nuxt.js with Moltin: %s'
-=======
+    }
+  },
   computed: mapState(['connected', 'cart']),
   methods: {
     async removeProduct(productId) {
@@ -86,7 +86,6 @@ export default {
       } catch (e) {
         console.log(e)
       }
->>>>>>> 5a830f1985cd5a56f4509a38e686075c9437b0b9
     }
   }
 }
