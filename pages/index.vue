@@ -3,7 +3,7 @@
     <nuxt-link
       v-for="product in products"
       :key="product.id"
-      :to="`/products/${product.slug}`"
+      :to="`/products/${product.id}`"
       class="product flex-grow border rounded m-3 text-black no-underline">
       <div class="text-center" style="background-color: rgba(0,0,0,.05);">
         <img :src="product.image" :alt="product.name" width="200">
@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  async asyncData({ app }) {
+  async asyncData({ app, error }) {
     const { json: { data, included: { main_images } } } = await app.$moltin.getProducts()
     const products = data.map(product => {
       const imageId = product.relationships.main_image
