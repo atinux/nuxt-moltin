@@ -44,6 +44,12 @@ export default {
       }
       this.loading = false
     }
+  },
+  head () {
+    return {
+      title: 'Login',
+      titleTemplate: 'Nuxt.js with Moltin: %s'
+    }
   }
 }
 </script>

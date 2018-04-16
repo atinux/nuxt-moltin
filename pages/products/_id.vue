@@ -90,6 +90,15 @@ export default {
       this.$store.commit('SET_CART_DATA', json)
       // this.$router.push('/cart')
     }
+  },
+  head () {
+    return {
+      title: this.product.name,
+      titleTemplate: 'Nuxt.js with Moltin: %s',
+      meta: [
+        { hid: 'description', name: 'description', content: this.product.description }
+      ]
+    }
   }
 }
 </script>
