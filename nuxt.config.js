@@ -1,8 +1,4 @@
-const pkg = require('./package')
-
-module.exports = {
-  mode: 'universal',
-
+export default {
   /*
   ** Headers of the page
   */
@@ -41,7 +37,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    'cookie-universal-nuxt'
+    'cookie-universal-nuxt',
+    '@nuxtjs/dotenv'
   ],
 
   /*
