@@ -1,10 +1,10 @@
 <template>
   <div class="bg-white border-b">
     <nav class="container mx-auto  flex items-center justify-between flex-wrap bg-white p-6">
-      <div class="flex items-center flex-no-shrink text-white mr-6">
+      <nuxt-link to="/" class="flex items-center flex-no-shrink text-white mr-6">
         <img src="/logo.svg" width="40" />
         <span class="font-semibold text-xl tracking-tight ml-2 text-black">Nuxt moltin demo</span>
-      </div>
+      </nuxt-link>
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
           <nuxt-link to="/register" class="block mt-4 no-underline lg:inline-block lg:mt-0 text-grey-darker hover:text-grey-darkest mr-4">
