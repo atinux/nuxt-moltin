@@ -89,6 +89,9 @@ export default {
 .Login__Form__Button:hover {
   background-color: #E06A2C;
 }
+.Login__Form__Button:focus {
+  outline: none;
+}
 .Login__Message {
   color: #E06A2C;
   padding: 20px 0;
