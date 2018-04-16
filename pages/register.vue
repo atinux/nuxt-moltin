@@ -1,5 +1,5 @@
 <template>
-  <div class="Register">
+  <div class="Register p-6">
     <h1 class="Register__Title">Create an account</h1>
     <form action="/" @submit.prevent="register">
       <label class="Register__Form__Label" for="name">Name</label>
@@ -52,7 +52,7 @@ export default {
 .Register__Title {
   font-size: 24px;
   font-weight: 400;
-  padding: 20px 0;
+  padding-bottom: 30px;
 }
 .Register__Form {
 

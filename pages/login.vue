@@ -1,5 +1,5 @@
 <template>
-  <div class="Login">
+  <div class="Login p-6">
     <h1 class="Login__Title">Log in to your account</h1>
     <form action="/" @submit.prevent="login">
       <label class="Login__Form__Label" for="email">Email</label>
@@ -49,7 +49,7 @@ export default {
 .Login__Title {
   font-size: 24px;
   font-weight: 400;
-  padding: 20px 0;
+  padding-bottom: 30px;
 }
 .Login__Form {
 
