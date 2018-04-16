@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white border-b">
-    <nav class="container mx-auto  flex items-center justify-between flex-wrap bg-white p-6">
+    <nav class="container mx-auto  flex items-center justify-between flex-wrap bg-white px-4 lg:px-0 py-4">
       <nuxt-link to="/" class="flex items-center flex-no-shrink text-white mr-6">
         <img src="/logo.svg" width="40" />
         <span class="font-semibold text-xl tracking-tight ml-2 text-black">Nuxt moltin demo</span>
