@@ -7,6 +7,7 @@
       <label class="Login__Form__Label" for="pwd">Password</label>
       <input v-model="form.password" class="Login__Form__Input" id="pwd" type="password">
       <button class="Login__Form__Button" type="submit">Login</button>
+      <p v-if="error">{{ error }}</p>
     </form>
   </div>
 </template>
@@ -18,12 +19,24 @@ export default {
       form: {
         email: '',
         password: ''
-      }
+      },
+      loading: false,
+      error: null
     }
   },
   methods: {
-    login () {
-      console.log(this.form)
+    async login () {
+      this.loading = true
+      this.error = null
+      try {
+        const { token } = await this.$moltin.login(this.form)
+
+        this.$store.dispatch('setToken', token)
+        this.loading = false
+        this.$router.push('/account')
+      } catch ({ json: { errors } }) {
+        this.error = 'Invalid credentials'
+      }
     }
   }
 }
