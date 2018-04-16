@@ -2,8 +2,9 @@
   <div class="bg-white border-b">
     <nav class="container mx-auto  flex items-center justify-between flex-wrap bg-white px-4 lg:px-0 py-4">
       <nuxt-link to="/" class="flex items-center flex-no-shrink text-white mr-6">
-        <img src="/logo.svg" width="40" />
-        <span class="font-semibold text-xl tracking-tight ml-2 text-black">Nuxt moltin demo</span>
+        <img src="/nuxt.svg" width="40" />
+        <span class="font-semibold text-xl tracking-tight mx-2 text-black">Nuxt & Moltin</span>
+        <img src="/moltin.svg" width="40" />
       </nuxt-link>
       <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
         <div class="text-sm lg:flex-grow">
